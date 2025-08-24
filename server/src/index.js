@@ -12,6 +12,10 @@ app.use(helmet()); // Security headers
 app.use(cors()); // Enable CORS
 app.use(express.json()); // Parse JSON bodies
 app.use(express.static(path.join(__dirname, '../../public'))); // Serve static files
+app.use((req, res, next) => {
+  console.log(`${new Date().toISOString()} - ${req.method} ${req.path}`);
+  next();
+});
 
 // In-memory storage for designs (in production, you would use a database)
 let designs = [];

@@ -1,16 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const saveDesignBtn = document.getElementById('save-design');
-  const clearCanvasBtn = document.getElementById('clear-canvas');
-  const componentButtons = document.querySelectorAll('.component-btn');
-
-  saveDesignBtn.addEventListener('click', saveDesign);
+  const clearCanvasBtn = document.getElementById('clear-btn');
   clearCanvasBtn.addEventListener('click', clearCanvas);
-
-  componentButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      addComponent(button.dataset.type);
-    });
-  });
 
   // Existing drag-and-drop logic
   const canvas = document.getElementById('canvas');
@@ -39,20 +29,15 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-function addComponent(type) {
-}
-
-function getComponentIcon(type) {
-}
-
-function getTypeLabel(type) {
-}
-
-function dragStart(e) {
-}
-
-function saveDesign() {
-}
-
 function clearCanvas() {
+    const canvas = document.getElementById('canvas');
+    canvas.innerHTML = `
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-center p-8">
+                <span class="material-symbols-outlined text-6xl text-gray-300 mb-4">cloud_upload</span>
+                <p class="text-gray-500 text-lg">Drag components here to start building</p>
+            </div>
+        </div>
+    `;
+    componentCount = 0;
 }
