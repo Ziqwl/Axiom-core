@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+body {
+  @apply bg-gray-50 min-h-screen;
+}
+
+header {
+  @apply bg-gradient-to-r from-primary-600 to-indigo-700 text-white shadow-lg;
+}
+
+.component-btn {
+  @apply bg-white border border-gray-200 rounded-xl p-4 flex flex-col items-center cursor-pointer shadow-sm hover:shadow-md;
+}
+
+.canvas-element {
+  @apply absolute bg-white border border-gray-300 rounded-lg p-3 shadow-md cursor-move flex items-center;
+}

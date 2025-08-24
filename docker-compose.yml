@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  # Frontend service
+  client:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.client
+    ports:
+      - "7070:80"
+    depends_on:
+      - server
+    networks:
+      - axiom-network
+
+  # Backend service
+  server:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.server
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=development
+      - PORT=3001
+    networks:
+      - axiom-network
+    volumes:
+      - ./server:/usr/src/app
+      - ./public:/usr/src/public
+      - /usr/src/app/node_modules
+
+# Define a network for services to communicate
+networks:
+  axiom-network:
+    driver: bridge

@@ -1,0 +1,28 @@
+{
+  "name": "axiom-server",
+  "version": "1.0.0",
+  "description": "Backend server for Axiom platform",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "devops",
+    "cloud",
+    "infrastructure"
+  ],
+  "author": "Axiom Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "jest": "^29.6.2"
+  }
+}
