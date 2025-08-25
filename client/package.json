@@ -1,0 +1,26 @@
+{
+  "name": "axiom-client",
+  "version": "1.0.0",
+  "description": "Frontend for Axiom Platform",
+  "scripts": {
+    "build": "mkdir -p ../public && cp -r src/* ../public/ && echo 'Client built successfully'",
+    "start": "echo \"Starting client development server\""
+  },
+  "keywords": [
+    "devops",
+    "cloud",
+    "infrastructure",
+    "react"
+  ],
+  "author": "Axiom Team",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^5.0.0"
+  }
+}
