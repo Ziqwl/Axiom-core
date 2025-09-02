@@ -35,7 +35,7 @@ header {
 }
 
 /* Smooth transitions for dark mode */
-.transition-colors {
+.dark-mode-transition {
   @apply transition-colors duration-300;
 }
 

@@ -68,9 +68,9 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className={`min-h-screen ${isDarkMode ? 'bg-gradient-to-br from-gray-900 to-gray-800' : 'bg-gradient-to-br from-gray-50 to-gray-100'} transition-colors duration-300`}>
+    <div className={`min-h-screen ${isDarkMode ? 'bg-gradient-to-br from-gray-900 to-gray-800' : 'bg-gradient-to-br from-gray-50 to-gray-100'} dark-mode-transition`}>
       {/* Modern Header with enhanced styling */}
-      <header className={`${isDarkMode ? 'bg-gradient-to-r from-blue-900 to-indigo-900 text-white' : 'bg-gradient-to-r from-blue-600 to-indigo-700 text-white'} shadow-2xl transition-all duration-300`}>
+      <header className={`${isDarkMode ? 'bg-gradient-to-r from-blue-900 to-indigo-900 text-white' : 'bg-gradient-to-r from-blue-600 to-indigo-700 text-white'} shadow-2xl dark-mode-transition`}>
         <div className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-2">
