@@ -1,11 +1,21 @@
-# Сборка
-FROM node:18 as build
+FROM node:18-alpine
+
 WORKDIR /app
+
+# Copy dependency files
 COPY client/package*.json ./
+
+# Install dependencies
 RUN npm ci
-COPY client .
+
+# Copy source code
+COPY client/ ./
+
+# Build the app
 RUN npm run build
 
-# Финальный образ
-FROM nginx:alpine
-COPY --from=build /app/build /usr/share/nginx/html
+# Expose port
+EXPOSE 3000
+
+# Start the app
+CMD ["npm", "run", "preview"]
