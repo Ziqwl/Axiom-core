@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Axiom Core Platform",
   "scripts": {
-    "start": "concurrently \"cd server && npm start\" \"cd client && npm run build\"",
-    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm start\"",
+    "start": "concurrently \"cd server && npm start\" \"cd client && npm run dev\"",
+    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\"",
     "build": "cd client && npm run build"
   },
   "keywords": [
@@ -14,15 +14,7 @@
   ],
   "author": "Axiom Team",
   "license": "MIT",
-  "dependencies": {
-    "tailwindcss": "^3.0.0",
-    "postcss": "^8.4.14",
-    "autoprefixer": "^10.4.7"
-  },
   "devDependencies": {
-    "tailwindcss": "^3.0.0",
-    "postcss": "^8.4.14",
-    "autoprefixer": "^10.4.7",
     "concurrently": "^7.0.0"
   }
 }

@@ -1,0 +1,37 @@
+diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
+index d9bd5e4..cb35c75 100644
+--- a/.github/workflows/ci.yml
++++ b/.github/workflows/ci.yml
+@@ -15,8 +15,7 @@ jobs:
+         node-version: [18.x]
+     
+     steps:
+-    - name: Checkout repository
+-      uses: actions/checkout@v3
++    - uses: actions/checkout@v3
+     
+     - name: Use Node.js ${{ matrix.node-version }}
+       uses: actions/setup-node@v3
+diff --git a/client/tailwind.config.js b/client/tailwind.config.js
+index 8a28467..89a305e 100644
+--- a/client/tailwind.config.js
++++ b/client/tailwind.config.js
+@@ -2,7 +2,7 @@
+ export default {
+   content: [
+     "./index.html",
+-    "./src/**/*.{js,ts,jsx,tsx,html,css}",
++    "./src/**/*.{js,ts,jsx,tsx}",
+   ],
+   theme: {
+     extend: {},
+diff --git a/docker/Dockerfile.client b/docker/Dockerfile.client
+index 73df989..967b290 100644
+--- a/docker/Dockerfile.client
++++ b/docker/Dockerfile.client
+@@ -1,4 +1,4 @@
+-FROM node:18-alpine as build
++FROM node:18-alpine
+ 
+ WORKDIR /app
+ 
